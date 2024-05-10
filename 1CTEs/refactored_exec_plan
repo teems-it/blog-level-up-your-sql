@@ -1,0 +1,10 @@
+Sort  (cost=1737.89..1738.39 rows=200 width=40) (actual time=13.379..13.381 rows=11 loops=1)
+  Sort Key: (count(*)) DESC
+  Sort Method: quicksort  Memory: 25kB
+  ->  HashAggregate  (cost=1728.25..1730.25 rows=200 width=40) (actual time=13.292..13.296 rows=11 loops=1)
+"        Group Key: unnest(string_to_array(translate(lower(cars.market_category), '- '::text, '__'::text), ','::text))"
+        Batches: 1  Memory Usage: 40kB
+        ->  ProjectSet  (cost=0.00..1132.55 rows=119140 width=32) (actual time=0.027..11.211 rows=16645 loops=1)
+              ->  Seq Scan on cars  (cost=0.00..358.14 rows=11914 width=12) (actual time=0.010..0.633 rows=11914 loops=1)
+Planning Time: 0.170 ms
+Execution Time: 13.518 ms
