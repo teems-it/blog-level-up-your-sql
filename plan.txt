@@ -3,4 +3,8 @@
 2a. Traditional solution
 2b. Refactored solution
 3. Benefits, limits and disadvantages of the solution
-4. Summaryq
+4. Summary
+
+
+
+hp/

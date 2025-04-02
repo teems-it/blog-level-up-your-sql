@@ -1,0 +1,5 @@
+ Seq Scan on cars  (cost=0.00..565.35 rows=11828 width=52) (actual time=0.017..8.097 rows=11828 loops=1)
+   Filter: (engine_cylinders_count <> 0)
+   Rows Removed by Filter: 86
+ Planning Time: 0.070 ms
+ Execution Time: 8.476 ms
